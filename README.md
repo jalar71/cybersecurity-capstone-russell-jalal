@@ -1,23 +1,18 @@
-# Capstone Assignment 1 – IT Infrastructure Deployment
+# Cybersecurity Capstone – Russell Jalal
 
-This repository contains the documentation and configuration files for Assignment 1 of my Cybersecurity Capstone project. The objective was to build a secure IT infrastructure using:
+This repository showcases all 10 completed assignments for my Cybersecurity Capstone project. Each assignment builds on practical IT infrastructure, network security, and system administration skills using technologies like VMware ESXi, Cisco, Active Directory, Docker, Wazuh, and more.
 
-- VMware ESXi
-- Two Windows Server 2022 virtual machines
-- One Windows 11 client machine
-- Layer 3 Cisco switch with VLANs and RADIUS
-- Active Directory, DHCP, and PowerShell automation
+## 📁 Assignment Index
 
-## Key Features
-- VLAN segmentation for network isolation
-- AD forest and domain setup
-- DHCP server deployment
-- RADIUS authentication for switch access
-- PowerShell scripts for user management automation
-- TFTP backup for switch configuration
-
-## Files Included
-- `Assignment_1_Report.pdf` 
-- `network-diagram.png` – (Optional: Add a visual diagram of your network)
-- `powershell/` – Folder containing PowerShell scripts
-- `configs/` – Folder containing Cisco switch configuration backup 
+| #  | Assignment Title                               | Description |
+|----|------------------------------------------------|-------------|
+| 1  | ESXi Setup & Windows Server                    | Deploy VMware ESXi and setup Windows Server with DHCP |
+| 2  | VLAN Segmentation & Virtual Switches           | Create 5 VLANs, configure routing and DHCP |
+| 3  | Secure Network Infrastructure                  | Secure Cisco devices, enable SSH, and test remote access |
+| 4  | Active Directory Domain Deployment             | Create AD forest, users, groups, and enforce policies |
+| 5  | RADIUS Auth & TFTP Backups                     | RADIUS auth for Cisco, port security, and device config backups |
+| 6  | Docker Web Server Deployment                   | Host a Docker web container on internal VLAN |
+| 7  | Nagios Monitoring System                       | Monitor infrastructure using Nagios |
+| 8  | Vulnerability Scanning with Nessus/OpenVAS     | Scan and analyze network vulnerabilities |
+| 9  | WordPress Public Site                          | Deploy and expose a WordPress website |
+| 10 | Mail Server and Wazuh SIEM                     | Internal email & SIEM integration using Wazuh |
