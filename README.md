@@ -17,7 +17,7 @@ This repository contains the documentation and configuration files for Assignmen
 - TFTP backup for switch configuration
 
 ## Files Included
-- `Assignment_1_Report.pdf` – Written documentation (converted from Word)
+- `Assignment_1_Report.pdf` 
 - `network-diagram.png` – (Optional: Add a visual diagram of your network)
 - `powershell/` – Folder containing PowerShell scripts
-- `configs/` – Folder containing Cisco switch configuration backup or samples
+- `configs/` – Folder containing Cisco switch configuration backup 
