@@ -1,13 +1,15 @@
-=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.03.05 16:33:11 =~=~=~=~=~=~=~=~=~=~=~=
-login as: engineer
-Keyboard-interactive authentication prompts from server:
-| Password: 
-End of keyboard-interactive prompts from server
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.02.26 09:36:16 =~=~=~=~=~=~=~=~=~=~=~=
 Hey! NO!!!!
-RJ_S1#show run
+
+User Access Verification
+
+Password: 
+RJ_S1>en
+Password: 
+RJ_S1#show u run
 Building configuration...
 
-Current configuration : 4033 bytes
+Current configuration : 3747 bytes
 !
 version 12.2
 no service pad
@@ -25,21 +27,11 @@ enable secret 5 $1$KA02$1UL1gs.nZzJE5JjSdx75C/
 username root privilege 15 secret 5 $1$KDq7$L8qCGtFZQawdq2XnIGMjW/
 !
 !
-aaa new-model
-!
-!
-aaa authentication login default group radius local
- --More--         aaa authentication enable default group radius
-aaa authorization exec default group radius local 
-aaa accounting exec default start-stop group radius
-!
-!
-!
-aaa session-id common
+no aaa new-model
 switch 1 provision ws-c3750-24p
 system mtu routing 1500
 authentication mac-move permit
-ip subnet-zero
+ --More--         ip subnet-zero
 ip routing
 ip domain-name capstone.com
 !
@@ -52,7 +44,7 @@ ip domain-name capstone.com
 !
 spanning-tree mode pvst
 spanning-tree etherchannel guard misconfig
- --More--         spanning-tree extend system-id
+spanning-tree extend system-id
 !
 vlan internal allocation policy ascending
 !
@@ -62,7 +54,7 @@ vlan internal allocation policy ascending
 interface FastEthernet1/0/1
  switchport access vlan 99
  switchport mode access
- shutdown
+ --More--          shutdown
 !
 interface FastEthernet1/0/2
  switchport access vlan 99
@@ -75,7 +67,7 @@ interface FastEthernet1/0/3
  switchport mode trunk
 !
 interface FastEthernet1/0/4
- --More--          switchport access vlan 99
+ switchport access vlan 99
  switchport mode access
  shutdown
 !
@@ -85,7 +77,7 @@ interface FastEthernet1/0/5
  shutdown
 !
 interface FastEthernet1/0/6
- switchport access vlan 99
+ --More--          switchport access vlan 99
  switchport mode access
  shutdown
 !
@@ -98,7 +90,7 @@ interface FastEthernet1/0/8
  switchport access vlan 99
  switchport mode access
  shutdown
- --More--         !
+!
 interface FastEthernet1/0/9
  switchport access vlan 99
  switchport mode access
@@ -108,7 +100,7 @@ interface FastEthernet1/0/10
  switchport access vlan 99
  switchport mode access
  shutdown
-!
+ --More--         !
 interface FastEthernet1/0/11
  switchport access vlan 99
  switchport mode access
@@ -121,7 +113,7 @@ interface FastEthernet1/0/12
 interface FastEthernet1/0/13
  no switchport
  ip address 172.16.1.109 255.255.255.0
- --More--         !
+!
 interface FastEthernet1/0/14
  switchport access vlan 99
  switchport mode access
@@ -131,7 +123,7 @@ interface FastEthernet1/0/15
  switchport access vlan 99
  switchport mode access
  shutdown
-!
+ --More--         !
 interface FastEthernet1/0/16
  switchport access vlan 99
  switchport mode access
@@ -144,7 +136,7 @@ interface FastEthernet1/0/17
 !
 interface FastEthernet1/0/18
  switchport access vlan 99
- --More--          switchport mode access
+ switchport mode access
  shutdown
 !
 interface FastEthernet1/0/19
@@ -154,7 +146,7 @@ interface FastEthernet1/0/19
 !
 interface FastEthernet1/0/20
  switchport access vlan 99
- switchport mode access
+ --More--          switchport mode access
  shutdown
 !
 interface FastEthernet1/0/21
@@ -167,7 +159,7 @@ interface FastEthernet1/0/22
  switchport mode access
  shutdown
 !
- --More--         interface FastEthernet1/0/23
+interface FastEthernet1/0/23
  switchport access vlan 99
  switchport mode access
  shutdown
@@ -177,7 +169,7 @@ interface FastEthernet1/0/24
  switchport mode access
  shutdown
 !
-interface GigabitEthernet1/0/1
+ --More--         interface GigabitEthernet1/0/1
  switchport access vlan 99
  switchport mode access
  shutdown
@@ -190,7 +182,7 @@ interface GigabitEthernet1/0/2
 interface Vlan1
  no ip address
 !
- --More--         interface Vlan10
+interface Vlan10
  ip address 10.109.10.1 255.255.255.0
  ip helper-address 10.109.30.130
 !
@@ -200,7 +192,7 @@ interface Vlan19
 interface Vlan20
  ip address 10.109.20.1 255.255.255.0
 !
-interface Vlan30
+ --More--         interface Vlan30
  ip address 10.109.30.1 255.255.255.0
 !
 interface Vlan40
@@ -213,19 +205,21 @@ ip classless
 ip route 172.16.2.0 255.255.255.0 172.16.1.50
 ip http server
 ip http secure-server
- --More--         !
+!
 !
 ip sla enable reaction-alerts
 !
-radius-server host 10.109.30.131 auth-port 1645 acct-port 1646 key 7 0202015707480C2E41
 !
 banner motd ^CHey! NO!!!!^C
 !
 line con 0
  password 7 15160E000864282B25
-line vty 0 4
+ login
+ --More--         line vty 0 4
+ login local
  transport input ssh
 line vty 5 15
+ login local
  transport input ssh
 !
 end
