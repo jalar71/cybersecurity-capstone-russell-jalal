@@ -33,9 +33,3 @@ SSH was configured on the switch to allow secure remote login from the classroom
 - SSH access tested from:
   - Classroom computer
   - Windows Server (inside ESXi)
-
-## 📂 Files Included
-
-- `wiring_diagram.png` – Illustration of classroom-to-switch-to-NUC connections
-- `ssh_config.txt` – Basic Cisco SSH config snippet
-- `ssh_access_screenshot.png` – Screenshot showing SSH login to the switch
