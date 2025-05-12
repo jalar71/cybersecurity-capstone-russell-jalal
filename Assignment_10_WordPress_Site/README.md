@@ -1,4 +1,4 @@
-# Assignment 9 – WordPress Website Deployment
+# Assignment 10 – WordPress Website Deployment
 
 This assignment involved deploying a WordPress-based website on a Linux virtual machine. The VM was initially set up in VMware Workstation and then migrated to VMware ESXi. The objective was to build a publicly accessible, template-based website that other students could view.
 
@@ -31,8 +31,9 @@ This assignment involved deploying a WordPress-based website on a Linux virtual 
 
 To make this site **accessible by other students** on the internal VLAN, a Cisco ACL was configured on the Layer 3 switch:
 
-``cisco
+```cisco
 access-list 100 permit tcp 10.0.0.0 0.0.0.255 host 10.109.50.3 eq www
+```
 
 ## 📂 Files Included
 
