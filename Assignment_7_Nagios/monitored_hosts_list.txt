@@ -1,0 +1,15 @@
+1. localhost (127.0.0.1)
+   - Ping
+   - Load
+   - Users
+   - HTTP
+   - Disk (root)
+   - SSH
+   - Swap
+   - Total Processes
+
+2. Windows 7 VM (10.109.60.3)
+   - Ping only
+
+3. CentOS VM (10.32.99.99)
+   - Ping only
