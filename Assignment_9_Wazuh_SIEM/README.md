@@ -37,7 +37,6 @@ The Wazuh agent monitored the localhost system for real-time events including:
 ## 📂 Additional Files
 
 - `monitored_events.txt` – Description of key events detected by Wazuh agent
-- *(Optional)* `wazuh_install_notes.txt` – Commands and configuration steps used during setup
 
 ## 🌐 Access Info
 
