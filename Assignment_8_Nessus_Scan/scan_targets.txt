@@ -1,0 +1,11 @@
+Scan Targets
+
+1. Windows XP
+   - IP: 10.109.60.2
+   - Reason: Legacy unsupported OS with known SMB vulnerabilities
+   - Notes: Focus on Badlock and SMB Signing
+
+2. Windows 7
+   - IP: 10.109.60.3
+   - Reason: Older OS still used in legacy systems
+   - Notes: Focus on EternalBlue and SMB misconfigurations
