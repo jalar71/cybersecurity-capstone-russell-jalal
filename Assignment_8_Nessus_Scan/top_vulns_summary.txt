@@ -1,0 +1,22 @@
+Key Vulnerabilities Identified
+
+🟨 Plugin #57608 – SMB Signing Not Required
+- Affects: Both XP and Win7
+- Severity: Medium
+- CVSS: 5.3 (CVSSv3)
+- Description: Allows man-in-the-middle attacks due to lack of signing enforcement
+- Solution: Enforce SMB signing via Group Policy
+
+🟥 Plugin #97833 – MS17-010: EternalBlue
+- Affects: Windows 7
+- Severity: High
+- CVSS: 8.1
+- Description: Remote code execution via SMBv1 exploited by WannaCry, EternalRocks
+- Solution: Apply Microsoft patch KB4013389
+
+🟨 Plugin #90510 – MS16-047: SAM/LSAD (Badlock)
+- Affects: Windows XP
+- Severity: Medium
+- CVSS: 6.8
+- Description: Elevation of privilege via downgrade of authentication level in LSAD/SAM
+- Solution: Apply patch KB3148527
