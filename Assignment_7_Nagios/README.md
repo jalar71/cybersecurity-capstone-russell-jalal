@@ -6,7 +6,6 @@ This assignment involved installing Nagios Core on a Linux VM, migrating it to V
 - Nagios Core (on Ubuntu Linux)
 - VMware ESXi
 - SSH and Ping checks
-- NRPE (optional – not used in this setup)
 
 ## 🖥️ Monitored Hosts
 
