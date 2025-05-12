@@ -1,0 +1,9 @@
+Monitored Events Detected by Wazuh:
+
+- Multiple valid login sessions (via PAM)
+- Successful `sudo` to root (privilege escalation)
+- Login session reuse (sudo caching)
+- Account-level authentication success
+- Detection of tactics such as Defense Evasion, Initial Access, Privilege Escalation (via MITRE mapping)
+
+Wazuh displayed these alerts using real-time event collection and correlation through its agent on the same Ubuntu VM.
